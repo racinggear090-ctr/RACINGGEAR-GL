@@ -1,0 +1,875 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #464646;
+    color: #000000;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #0011ff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff0022;
+}
+
+/* =========================
+   PÁGINA INICIAL
+========================= */
+
+.hero {
+    min-height: 500px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: white;
+}
+/* MARCA DE ÁGUA NO CENTRO */
+
+.marca-agua {
+    position: fixed;
+
+    top: 20%;
+    left: 20%;
+
+    transform: translate(-40%, -40%);
+
+    width: 400px;
+
+    opacity: 0.30;
+
+    z-index: 9999;
+
+    pointer-events: none;
+}
+
+.marca-agua img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hero-text {
+    max-width: 550px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 50px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #007f96;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.conteudo h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.cartoes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.cartao {
+    background-color: white;
+    width: 300px;
+    min-height: 250px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cartao img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.cartao h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.cartao p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   PÁGINAS
+========================= */
+
+.pagina {
+    min-height: 600px;
+    padding: 60px 10%;
+    background-color: white;
+}
+
+.pagina h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.pagina p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.imagem-pagina {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   RECURSOS
+========================= */
+
+.recursos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.recurso {
+    width: 300px;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.recurso h2 {
+    margin-bottom: 15px;
+}
+
+.recurso p {
+    font-size: 16px;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #00a8c6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #007f96;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* =========================
+   GALERIA DE FOTOGRAFIAS
+========================= */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.foto {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.foto img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 7px;
+    display: block;
+}
+
+.foto h3 {
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* =========================
+   PÁGINA DE ESCAPES
+========================= */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.produto {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.produto > img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #f4f4f4;
+    display: block;
+}
+
+.produto-info {
+    padding: 25px;
+}
+
+.produto-info h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.descricao {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.preco {
+    color: #ff0000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.introducao {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+
+.voltar {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   VÍDEO EM MINIATURA
+========================= */
+
+.video-mota {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.video-mota video {
+    width: 350px !important;
+    max-width: 350px !important;
+    height: auto !important;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.informacoes-contacto {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.informacoes-contacto h2 {
+    margin-bottom: 20px;
+}
+
+.informacoes-contacto p {
+    margin-bottom: 12px;
+}
+    
+/* =========================================
+   RESPONSIVO - COMPUTADOR, TABLET E TELEMÓVEL
+   ========================================= */
+
+/* TABLETS */
+@media (max-width: 900px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .pagina {
+        padding: 50px 6%;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================
+   TELEMÓVEIS
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       GERAL
+       ------------------------- */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* -------------------------
+       CABEÇALHO
+       ------------------------- */
+
+    header {
+        width: 100%;
+        height: auto;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    /* -------------------------
+       MENU
+       ------------------------- */
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 5px;
+    }
+
+
+    /* -------------------------
+       PÁGINA INICIAL
+       ------------------------- */
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content h1,
+    .hero-text h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p,
+    .hero-text p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* -------------------------
+       IMAGEM PRINCIPAL
+       ------------------------- */
+
+    .hero-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 250px;
+        max-width: 90%;
+        height: auto;
+    }
+
+
+    /* -------------------------
+       BOTÕES
+       ------------------------- */
+
+    .botoes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .botoes .botao {
+        width: 100%;
+        text-align: center;
+    }
+
+    .botao {
+        padding: 13px 18px;
+        font-size: 16px;
+    }
+
+
+    /* -------------------------
+       PÁGINAS
+       ------------------------- */
+
+    .pagina {
+        width: 100%;
+        min-height: 600px;
+        padding: 40px 20px;
+    }
+
+    .pagina h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .pagina h2 {
+        font-size: 25px;
+        margin-top: 25px;
+    }
+
+    .pagina p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* -------------------------
+       GALERIA DE MOTAS/FOTOS
+       ------------------------- */
+
+    .galeria {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 25px 0;
+    }
+
+    .foto {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .foto img {
+        width: 100%;
+        height: 240px;
+        object-fit: contain;
+    }
+
+    .foto h3 {
+        font-size: 18px;
+    }
+
+
+    /* -------------------------
+       PRODUTOS
+       ------------------------- */
+
+    .produtos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .produto {
+        width: 100%;
+    }
+
+    .produto > img {
+        width: 100%;
+        height: 240px;
+        object-fit: contain;
+    }
+
+    .produto-info {
+        padding: 20px;
+    }
+
+    .produto-info h2 {
+        font-size: 22px;
+    }
+
+
+    /* -------------------------
+       PREÇOS
+       ------------------------- */
+
+    .preco {
+        font-size: 22px;
+    }
+
+
+    /* -------------------------
+       VÍDEOS
+       ------------------------- */
+
+    .video-mota {
+        width: 100%;
+        margin: 25px auto;
+        text-align: center;
+    }
+
+    .video-mota video {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 8px;
+    }
+
+
+    /* -------------------------
+       FORMULÁRIOS
+       ------------------------- */
+
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    form label {
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    form textarea {
+        min-height: 150px;
+    }
+
+    form button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+
+    /* -------------------------
+       CONTACTOS
+       ------------------------- */
+
+    .informacoes-contacto {
+        width: 100%;
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .informacoes-contacto h2 {
+        font-size: 24px;
+    }
+
+
+    /* -------------------------
+       ESCOLHA DE CORES
+       ------------------------- */
+
+    .escolher-cor {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .escolher-cor label {
+        width: 100%;
+        text-align: center;
+        padding: 12px 5px;
+    }
+
+
+    /* -------------------------
+       IMAGENS DAS MOTAS
+       ------------------------- */
+
+    .mota-cor {
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .mota-cor img {
+        width: 100%;
+        max-width: 100%;
+        height: 280px;
+        object-fit: contain;
+    }
+
+
+    /* -------------------------
+       BOTÃO VOLTAR
+       ------------------------- */
+
+    .voltar {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .voltar .botao {
+        width: 100%;
+    }
+
+
+    /* -------------------------
+       CARTÕES
+       ------------------------- */
+
+    .conteudo {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    .conteudo h2 {
+        font-size: 28px;
+    }
+
+    .cartoes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .cartao img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+
+    /* -------------------------
+       RECURSOS
+       ------------------------- */
+
+    .recursos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .recurso {
+        width: 100%;
+    }
+
+
+    /* -------------------------
+       MARCA DE ÁGUA
+       ------------------------- */
+
+    .marca-agua {
+        width: 100%;
+        height: 100%;
+    }
+
+    .marca-agua img {
+        width: 85%;
+        max-width: 400px;
+        height: auto;
+    }
+
+
+    /* -------------------------
+       RODAPÉ
+       ------------------------- */
+
+    footer {
+        width: 100%;
+        padding: 20px 15px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+}
+
+}
+```
